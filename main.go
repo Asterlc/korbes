@@ -1,9 +1,9 @@
 package main
 
-import (
-	"kobres/concorrencia"
-)
+import "kobres/concorrencia"
 
 func main() {
-	concorrencia.ExeConcorrencia()
+	// concorrencia.ExeConcorrencia()
+	// concorrencia.Corrida()
+	concorrencia.ContaRapida(100)
 }
