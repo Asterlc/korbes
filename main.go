@@ -1,7 +1,10 @@
 package main
 
-import "kobres/concorrencia"
+import (
+	"kobres/cruzada"
+)
 
 func main() {
-	concorrencia.CorridaAtomic()
+	cruzada.Welcome()
+
 }
