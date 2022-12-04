@@ -1,10 +1,10 @@
 package main
 
 import (
-	"kobres/cruzada"
+	"kobres/canais"
 )
 
 func main() {
-	cruzada.Welcome()
-
+	canalQualquer := make(chan int)
+	canais.TesteCanal2(canalQualquer)
 }

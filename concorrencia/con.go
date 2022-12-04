@@ -12,7 +12,6 @@ var wg sync.WaitGroup
 var mu sync.Mutex
 
 func ExeConcorrencia() {
-
 	wg.Add(1)
 	go um()
 	dois()
