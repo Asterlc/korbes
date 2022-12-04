@@ -82,10 +82,8 @@ func CorridaAtomic() {
 	for i := 0; i < totalRoutines; i++ {
 		go func() {
 			atomic.AddInt64(&contador, 1)
-			v := contador
 			runtime.Gosched()
-			v++
-			contador = v
+			atomic.LoadInt64(&contador)
 			wg.Done()
 		}()
 	}
