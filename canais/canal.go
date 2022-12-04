@@ -30,3 +30,18 @@ func receive(r <-chan int) {
 	x := <-r
 	fmt.Println(x)
 }
+
+func TesteCanalRange(n int, c chan int) {
+	go meuLoop(n, c)
+
+	for v := range c {
+		fmt.Println("Recebido do canal:", v)
+	}
+}
+
+func meuLoop(t int, c chan<- int) {
+	for i := 0; i < t; i++ {
+		c <- i
+	}
+	close(c)
+}
